@@ -1,0 +1,31 @@
+body {
+  font-family: monospace;
+  background-color: #111;
+  color: #eee;
+  text-align: center;
+}
+
+#game {
+  display: grid;
+  grid-template-columns: repeat(10, 30px); /* 10x10 map */
+  justify-content: center;
+  gap: 2px;
+}
+
+.cell {
+  width: 30px;
+  height: 30px;
+  background: #333;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  user-select: none;
+}
+.cell.revealed {
+  background: #777;
+}
+.cell.flagged {
+  background: #d33;
+}
